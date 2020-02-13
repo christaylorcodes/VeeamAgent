@@ -886,9 +886,9 @@
           <maml:Description>
             <maml:para>{{ Fill DownloadPath Description }}</maml:para>
           </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
-            <maml:name>Object</maml:name>
+            <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>$env:TEMP</dev:defaultValue>
@@ -898,9 +898,9 @@
           <maml:Description>
             <maml:para>URL to the VeeamAgent installer zip you want to install.</maml:para>
           </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
-            <maml:name>Object</maml:name>
+            <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>https://download2.veeam.com/VeeamAgentWindows_3.0.2.1170_.zip</dev:defaultValue>
@@ -910,9 +910,9 @@
           <maml:Description>
             <maml:para>MD5 of the installer to verify against.</maml:para>
           </maml:Description>
-          <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+          <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
-            <maml:name>Object</maml:name>
+            <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>9724D5845D724A7903327142E7659125</dev:defaultValue>
@@ -947,9 +947,9 @@
         <maml:Description>
           <maml:para>{{ Fill DownloadPath Description }}</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
-          <maml:name>Object</maml:name>
+          <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>$env:TEMP</dev:defaultValue>
@@ -959,9 +959,9 @@
         <maml:Description>
           <maml:para>URL to the VeeamAgent installer zip you want to install.</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
-          <maml:name>Object</maml:name>
+          <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>https://download2.veeam.com/VeeamAgentWindows_3.0.2.1170_.zip</dev:defaultValue>
@@ -971,9 +971,9 @@
         <maml:Description>
           <maml:para>MD5 of the installer to verify against.</maml:para>
         </maml:Description>
-        <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
+        <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
-          <maml:name>Object</maml:name>
+          <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>9724D5845D724A7903327142E7659125</dev:defaultValue>

@@ -13,7 +13,7 @@ This function will install Veeam Agent For Windows.
 ## SYNTAX
 
 ```
-Install-VeeamAgent [[-DownloadPath] <Object>] [[-DownloadURL] <Object>] [[-MD5] <Object>] [-Force] [-Upgrade]
+Install-VeeamAgent [[-DownloadPath] <String>] [[-DownloadURL] <String>] [[-MD5] <String>] [-Force] [-Upgrade]
  [<CommonParameters>]
 ```
 
@@ -33,7 +33,7 @@ Install-VeeamAgentForWindows
 {{ Fill DownloadPath Description }}
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -48,7 +48,7 @@ Accept wildcard characters: False
 URL to the VeeamAgent installer zip you want to install.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
@@ -63,7 +63,7 @@ Accept wildcard characters: False
 MD5 of the installer to verify against.
 
 ```yaml
-Type: Object
+Type: String
 Parameter Sets: (All)
 Aliases:
 
