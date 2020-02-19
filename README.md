@@ -1,4 +1,7 @@
-﻿![VeeamAgentLogo](vaw_01.png)
+﻿[![Build status](https://ci.appveyor.com/api/projects/status/5ebhwddd5n5iqw1a?svg=true)](https://ci.appveyor.com/project/christaylorcodes/veeamagent)
+[![Gallery](https://img.shields.io/powershellgallery/v/VeeamAgent?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/VeeamAgent)
+
+![VeeamAgentLogo](vaw_01.png)
 
 ## This is a PowerShell module for interacting with Veeam Agent. 
 

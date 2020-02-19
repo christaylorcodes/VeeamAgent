@@ -54,13 +54,13 @@ Aliases:
 
 Required: False
 Position: 2
-Default value: https://download2.veeam.com/VeeamAgentWindows_3.0.2.1170_.zip
+Default value: https://download2.veeam.com/VeeamAgentWindows_4.0.0.1811.zip
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -MD5
-MD5 of the installer to verify against.
+MD5 of the zipped installer to verify against.
 
 ```yaml
 Type: String
@@ -69,7 +69,7 @@ Aliases:
 
 Required: False
 Position: 3
-Default value: 9724D5845D724A7903327142E7659125
+Default value: 5994A011696960FE5582B9C82973E7AE
 Accept pipeline input: False
 Accept wildcard characters: False
 ```

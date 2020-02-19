@@ -2,15 +2,15 @@
     [CmdletBinding()]
     Param(
         [string]$DownloadPath = $env:TEMP,
-        [string]$DownloadURL = 'https://download2.veeam.com/VeeamAgentWindows_3.0.2.1170_.zip',
-        [string]$MD5 = '9724D5845D724A7903327142E7659125',
+        [string]$DownloadURL = 'https://download2.veeam.com/VeeamAgentWindows_4.0.0.1811.zip',
+        [string]$MD5 = '5994A011696960FE5582B9C82973E7AE',
         [switch]$Force,
         [switch]$Upgrade
     )
     $DownloadFileName = 'VeeamAgent.zip'
     $Installer = (Split-Path $DownloadURL -Leaf).Replace('.zip','.exe')
-    $InstallerPath = (Join-Path $DownloadPath $Installer).Replace('_.exe','.exe')
-    [version]$InstallerVersion = ($Installer -split '_')[1]
+    $InstallerPath = (Join-Path $DownloadPath $Installer).Replace('.exe','.exe')
+    [version]$InstallerVersion = ($Installer -split '_')[1] -replace '.exe', ''
 
     # Test to see if Veeam Agent is already installed
     $CurrentVersion = Get-VeeamAgentVersion
