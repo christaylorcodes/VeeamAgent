@@ -6,6 +6,9 @@
 ## This is a PowerShell module for interacting with Veeam Agent. 
 
 This module allows you to install, configure, report, monitor and remove Veeam Agent.
+This module can be easily installed from the [PowerShellGallery](https://www.powershellgallery.com/packages/VeeamAgent)
+
+>`Install-Module 'VeeamAgent'`
 
 See [VeeamAgent_Functions](VeeamAgent_Functions.md) for a list of commands available in this module.
 
