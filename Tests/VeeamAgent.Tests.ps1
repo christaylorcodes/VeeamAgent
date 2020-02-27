@@ -17,13 +17,28 @@ Describe "Install-VeeamAgent  PS$PSVersion Integrations tests" {
         Set-StrictMode -Version latest
 
         It 'should install' {
-            $ServiceName = 'Testing'
             try { 
                 Install-VeeamAgent -ErrorAction Stop
                 $Service = Get-Service $ServiceName -ErrorAction SilentlyContinue
-                $Service.Name | Should -Be $ServiceName    
+                $Service | Should -Not -BeNullOrEmpty
             }
-            catch { $_ | Should -Be $null }
+            catch { $_ | Should -BeNullOrEmpty }
+        }
+    }
+}
+
+Describe "Get-VeeamAgentVersion  PS$PSVersion Integrations tests" {
+
+    Context 'Strict mode' {
+
+        Set-StrictMode -Version latest
+
+        It 'should return version' {
+            try { 
+                $Version = Get-VeeamAgentVersion                
+                $Version | Should -BeGreaterOrEqual 4
+            }
+            catch { $_ | Should -BeNullOrEmpty }
         }
     }
 }
@@ -38,9 +53,9 @@ Describe "Remove-VeeamAgent  PS$PSVersion Integrations tests" {
             try{
                 Remove-VeeamAgent -ErrorAction Stop 
                 $Service = Get-Service $ServiceName -ErrorAction SilentlyContinue
-                $Service | Should -Be $null    
+                $Service | Should -BeNullOrEmpty    
             }
-            catch{ $_ | Should -Be $null }
+            catch{ $_ | Should -BeNullOrEmpty }
         }
     }
 }
