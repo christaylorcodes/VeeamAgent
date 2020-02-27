@@ -27,8 +27,7 @@
     # admin check
     $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
     if(!$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-        Write-Error 'Access denied, run as admin.'
-        break;
+        Write-Error 'Access denied, run as admin.' -ErrorAction Stop
     }
 
     # Test to see if there is already an installer present and a force has not been issued.
@@ -43,9 +42,8 @@
             Invoke-WebRequest -Uri $DownloadURL -OutFile "$DownloadPath\$DownloadFileName"
         }
         catch{
-            Write-Output "There was an error downloading the agent."
-            Write-Output $Error[0]
-            break
+            Write-Error "There was an error downloading the agent." -ErrorAction Continue
+            Write-Error $_ -ErrorAction Stop
         }
 
         Write-Verbose "Extracting installer"
@@ -55,8 +53,8 @@
             [System.IO.Compression.ZipFile]::ExtractToDirectory("$DownloadPath\$DownloadFileName", $DownloadPath)
         }
         catch{
-            Write-Output "There was an error extracting the agent."
-            Write-Output $Error[0]
+            Write-Error "There was an error extracting the agent." -ErrorAction Continue
+            Write-Error $_ -ErrorAction Stop
             break
         }
     }
@@ -74,19 +72,17 @@
             break
         }
         elseif($InstallProcess.ExitCode -eq 1002){
-            Write-Output "Veeam Agent for Microsoft Windows installation has failed."
-            break
+            Write-Error "Veeam Agent for Microsoft Windows installation has failed. ExitCode 1002" -ErrorAction Stop
         }
         elseif($InstallProcess.ExitCode -eq 1101){
             Write-Output "Veeam Agent for Microsoft Windows has been installed. The machine needs to be rebooted."
         }
         else{
-            Write-Output "Error: There was an unknown exit code, $($InstallProcess.ExitCode)"
-            break
+            Write-Error "There was an unknown exit code, $($InstallProcess.ExitCode)" -ErrorAction Stop
         }
     }
     catch{
-        Write-Error $_
+        Write-Error $_ -ErrorAction Stop
         break
     }
     Write-Verbose "Cleaning up"

@@ -29,6 +29,9 @@ Gets all the backup repositories that have been configured.
 ### [Get-VeeamAgentCloudRepository](Get-VeeamAgentCloudRepository.md)
 Gets all the cloud repositories that have been configured.
 
+### [Get-VeeamAgentForeignRepositoryProvider](Get-VeeamAgentForeignRepositoryProvider.md)
+{{ Fill in the Synopsis }}
+
 ### [Get-VeeamAgentJob](Get-VeeamAgentJob.md)
 Lists all the agent jobs that have been configured.
 
