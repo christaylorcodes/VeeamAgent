@@ -5,28 +5,28 @@ online version:
 schema: 2.0.0
 ---
 
-# Get-VeeamAgentForeignRepositoryProvider
+# Initialize-VeeamLocalBackupDestination
 
 ## SYNOPSIS
-{{ Fill in the Synopsis }}
+Will look for a local USB drive to use as a backup destination.
 
 ## SYNTAX
 
 ```
-Get-VeeamAgentForeignRepositoryProvider [<CommonParameters>]
+Initialize-VeeamLocalBackupDestination [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+Will look at all USB drives for an existing 'Backup*' folder. If no folder or multiple folders are found it will create a 'Backup' folder on the root of the largest drive.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> Initialize-VeeamLocalBackupDestination
 ```
 
-{{ Add example description here }}
+Will output a path to be used for backups.
 
 ## PARAMETERS
 

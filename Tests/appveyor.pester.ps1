@@ -1,14 +1,14 @@
 ﻿# This script will invoke pester tests
 # We serialize XML results and pull them in appveyor.yml
 
-#If Finalize is specified, we collect XML output, upload tests, and indicate build errors
+# If Finalize is specified, we collect XML output, upload tests, and indicate build errors
 param(
     [switch]$Finalize,
     [switch]$Test,
     [string]$ProjectRoot = $ENV:APPVEYOR_BUILD_FOLDER
 )
 
-#Initialize some variables, move to the project root
+# Initialize some variables, move to the project root
 $Timestamp = Get-date -uformat "%Y%m%d-%H%M%S"
 $PSVersion = $PSVersionTable.PSVersion.Major
 $TestFile = "TestResults_PS$PSVersion`_$TimeStamp.xml"
@@ -22,7 +22,7 @@ if($env:APPVEYOR_REPO_BRANCH -and $env:APPVEYOR_REPO_BRANCH -notlike "master")
     $Verbose.add("Verbose",$True)
 }
 
-#Run a test with the current version of PowerShell, upload results
+# Run a test with the current version of PowerShell, upload results
 if($Test)
 {
     "`n`tSTATUS: Testing with PowerShell $PSVersion`n"
@@ -38,15 +38,15 @@ if($Test)
     }
 }
 
-#If finalize is specified, display errors and fail build if we ran into any
+# If finalize is specified, display errors and fail build if we ran into any
 If($Finalize)
 {
-    #Show status...
+    # Show status...
         $AllFiles = Get-ChildItem -Path $ProjectRoot\PesterResults*.xml | Select-Object -ExpandProperty FullName
         "`n`tSTATUS: Finalizing results`n"
         "COLLATING FILES:`n$($AllFiles | Out-String)"
 
-    #What failed?
+    # What failed?
         $Results = @( Get-ChildItem -Path "$ProjectRoot\PesterResults_PS*.xml" | Import-Clixml )
 
         $FailedCount = $Results |

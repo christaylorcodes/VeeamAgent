@@ -1,5 +1,7 @@
 ﻿function Set-VeeamAgentLowSpaceMonitor {
-    param(
+    [CmdletBinding(SupportsShouldProcess)]
+    [CmdletBinding()]
+    param (
         $GBLimit = 100GB,
         $PercentLimit = 10
     )
@@ -22,7 +24,7 @@ WHERE dbo.BJobs.type = 4000
     if ($Percent -lt $PercentLimit -and $Percent -ne $CurrentSetting){
         Write-Output "Adjusting low space threshold to $($Percent)%"
         New-ItemProperty -Path 'HKLM:\SOFTWARE\Veeam\Veeam Endpoint Backup' -Name 'BackupRepositoryFreeSpaceThresholdPercent' -PropertyType DWORD -Value $Percent -Force | Out-Null
-        break
+        return
     }
     if ($CurrentSetting -eq $PercentLimit){ return }
     if ($Percent -gt $PercentLimit) {

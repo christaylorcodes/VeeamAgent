@@ -2,8 +2,8 @@
     [CmdletBinding()]
     Param(
         [string]$DownloadPath = $env:TEMP,
-        [string]$DownloadURL = 'https://download2.veeam.com/VeeamAgentWindows_4.0.0.1811.zip',
-        [string]$MD5 = '5994A011696960FE5582B9C82973E7AE',
+        [string]$DownloadURL = $DefaultDownloadURL,
+        [string]$MD5 = $DefaultMD5,
         [switch]$Force,
         [switch]$Upgrade
     )
@@ -19,15 +19,12 @@
     -and (
         ($Upgrade.IsPresent -and $InstallerVersion -le [version]$CurrentVersion) `
         -or !$Upgrade.IsPresent)
-    ){
-        Write-Output "Veeam Agent For Windows $CurrentVersion, is already installed."
-        break
-    }
+    ){ return Write-Output "Veeam Agent For Windows $CurrentVersion, is already installed." }
 
     # admin check
     $currentPrincipal = New-Object Security.Principal.WindowsPrincipal([Security.Principal.WindowsIdentity]::GetCurrent())
     if(!$currentPrincipal.IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)) {
-        Write-Error 'Access denied, run as admin.' -ErrorAction Stop
+        return Write-Error 'Access denied, run as admin.'
     }
 
     # Test to see if there is already an installer present and a force has not been issued.
@@ -53,9 +50,9 @@
             [System.IO.Compression.ZipFile]::ExtractToDirectory("$DownloadPath\$DownloadFileName", $DownloadPath)
         }
         catch{
-            Write-Error "There was an error extracting the agent." -ErrorAction Continue
-            Write-Error $_ -ErrorAction Stop
-            break
+            $Message = "There was an error extracting the agent."
+            $Message += $_
+            return Write-Error  $Message
         }
     }
 
@@ -68,22 +65,20 @@
             Write-Verbose "Veeam Agent for Microsoft Windows has been successfully installed."
         }
         elseif($InstallProcess.ExitCode -eq 1001){
-            Write-Output "Prerequisite components required for Veeam Agent for Microsoft Windows have been installed on the machine. Veeam Agent for Microsoft Windows has not been installed. The machine needs to be rebooted."
-            break
+            return Write-Output "Prerequisite components required for Veeam Agent for Microsoft Windows have been installed on the machine. Veeam Agent for Microsoft Windows has not been installed. The machine needs to be rebooted."
         }
         elseif($InstallProcess.ExitCode -eq 1002){
-            Write-Error "Veeam Agent for Microsoft Windows installation has failed. ExitCode 1002" -ErrorAction Stop
+            return Write-Error "Veeam Agent for Microsoft Windows installation has failed. ExitCode 1002"
         }
         elseif($InstallProcess.ExitCode -eq 1101){
             Write-Output "Veeam Agent for Microsoft Windows has been installed. The machine needs to be rebooted."
         }
         else{
-            Write-Error "There was an unknown exit code, $($InstallProcess.ExitCode)" -ErrorAction Stop
+            return Write-Error "There was an unknown exit code, $($InstallProcess.ExitCode)"
         }
     }
     catch{
-        Write-Error $_ -ErrorAction Stop
-        break
+        return Write-Error $_
     }
     Write-Verbose "Cleaning up"
     $null = Remove-Item "$DownloadPath\$DownloadFileName" -Force

@@ -1,5 +1,6 @@
 ﻿function Invoke-VeeamAgentDBQuery {
-    param(
+    [CmdletBinding()]
+    param (
         [Parameter(Mandatory = $true)]
         [string] $Query
     )

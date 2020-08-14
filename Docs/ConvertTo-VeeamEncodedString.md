@@ -5,56 +5,41 @@ online version:
 schema: 2.0.0
 ---
 
-# Install-VeeamAgentLicense
+# ConvertTo-VeeamEncodedString
 
 ## SYNOPSIS
-Will install a given license file.
+Encodes strings for use in configurations.
 
 ## SYNTAX
 
 ```
-Install-VeeamAgentLicense -Path <Object> -Type <String> [<CommonParameters>]
+ConvertTo-VeeamEncodedString [[-String] <String>] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
-{{ Fill in the Description }}
+The configurations require some strings to be encoded for them to be imported.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> {{ Add example code here }}
+PS C:\> ConvertTo-VeeamEncodedString 'MyPlainTextPassword'
 ```
 
-{{ Add example description here }}
+Will return an encoded string you can use in a Veeam Agent configuration file.
 
 ## PARAMETERS
 
-### -Path
-{{ Fill Path Description }}
-
-```yaml
-Type: Object
-Parameter Sets: (All)
-Aliases:
-
-Required: True
-Position: Named
-Default value: None
-Accept pipeline input: False
-Accept wildcard characters: False
-```
-
-### -Type
-{{ Fill Type Description }}
+### -String
+The string you want encoded.
 
 ```yaml
 Type: String
 Parameter Sets: (All)
 Aliases:
 
-Required: True
-Position: Named
+Required: False
+Position: 0
 Default value: None
 Accept pipeline input: False
 Accept wildcard characters: False
@@ -68,7 +53,7 @@ This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable
 ### None
 ## OUTPUTS
 
-### System.Object
+### System.String
 ## NOTES
 
 ## RELATED LINKS

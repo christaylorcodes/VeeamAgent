@@ -1,4 +1,4 @@
-function Invoke-VeeamAgentBackup {
+﻿function Invoke-VeeamAgentBackup {
     [CmdletBinding()]
     param (
         [guid]$ID,
@@ -11,6 +11,7 @@ function Invoke-VeeamAgentBackup {
         [Parameter(ParameterSetName = "Standalone")]
         [switch]$Standalone
     )
+
     $Arguments = @()
     if ($Backup) { $Arguments += '/backup' }
     if ($ActiveFull) { $Arguments += '/activefull' }

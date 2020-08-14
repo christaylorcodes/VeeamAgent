@@ -11,6 +11,9 @@ Locale: en-US
 This module give you commands to un/install, configure, report and monitor on Veeam Agent.
 
 ## VeeamAgent Cmdlets
+### [ConvertTo-VeeamEncodedString](ConvertTo-VeeamEncodedString.md)
+Encodes strings for use in configurations.
+
 ### [Export-VeeamAgentConfig](Export-VeeamAgentConfig.md)
 Used to export jobs to a backup config.
 
@@ -49,6 +52,9 @@ Returns the currently installed Veeam Agent version. Returns $false if not found
 
 ### [Import-VeeamAgentConfig](Import-VeeamAgentConfig.md)
 Imports settings from an export.
+
+### [Initialize-VeeamLocalBackupDestination](Initialize-VeeamLocalBackupDestination.md)
+Will look for a local USB drive to use as a backup destination.
 
 ### [Install-VeeamAgent](Install-VeeamAgent.md)
 This function will install Veeam Agent For Windows.

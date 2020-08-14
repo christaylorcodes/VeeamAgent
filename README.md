@@ -4,7 +4,7 @@
 
 ![VeeamAgentLogo](vaw_01.png)
 
-## This is a PowerShell module for interacting with Veeam Agent.
+## This is a PowerShell module for interacting with Veeam Agent
 
 This module allows you to install, configure, report, monitor and remove Veeam Agent.
 This module can be easily installed from the [PowerShellGallery](https://www.powershellgallery.com/packages/VeeamAgent)
@@ -15,13 +15,13 @@ See [VeeamAgent_Functions](VeeamAgent_Functions.md) for a list of commands avail
 
 Checkout the [Examples](https://github.com/christaylorcodes/VeeamAgent/tree/master/Examples) folder to see other ways to use the module.
 
-# [Contributing](CONTRIBUTING.md)
+## [Contributing](CONTRIBUTING.md)
 
 If you use this project please give it a star and follow so you can get updated when new features are released. This also lets me know what projects are getting used and what ones I should dedicate more time to. If you want to get more involved please see the [contributing page](CONTRIBUTING.md). Projects need all kinds of help even if you don't know how to code.
 
 Want to share something you created using the module? Submit it to be featured as a Community Package.
 
-# [Donating](https://paypal.me/ChrisTaylorCodes)
+## [Donating](https://paypal.me/ChrisTaylorCodes)
 
 If you cant take time to contribute maybe you would like to help in other ways.
 
