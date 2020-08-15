@@ -61,7 +61,7 @@
                 $xml.ExecutionResult.Data.JobInfo.TargetInfo.RemoteRepositoryName = $RemoteRepositoryName
                 $xml.ExecutionResult.Data.JobInfo.TargetInfo.GateList = "$($ServerName):$($ServerPort)"
                 $xml.ExecutionResult.Data.JobInfo.TargetInfo.ServerCredentials.UserName = ConvertTo-VeeamEncodedString $Credential.UserName
-                $xml.ExecutionResult.Data.JobInfo.TargetInfo.ServerCredentials.Password = ConvertTo-VeeamEncodedString $Credential.UserName
+                $xml.ExecutionResult.Data.JobInfo.TargetInfo.ServerCredentials.Password = ConvertTo-VeeamEncodedString $Credential.GetNetworkCredential().Password
             }
 
             $xml.ExecutionResult.Version = "$(Get-VeeamAgentVersion)"
