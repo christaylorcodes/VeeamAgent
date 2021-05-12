@@ -10,5 +10,5 @@ function Export-VeeamAgentConfig {
     $Option += "/f:`"$Path`""
     $Command = "`"$env:ProgramFiles\Veeam\Endpoint Backup\Veeam.Agent.Configurator.exe`" -export $($Option -join ' ')"
     Write-Verbose $Command
-    cmd /c $Command
+    cmd /c $Command 2>&1
 }

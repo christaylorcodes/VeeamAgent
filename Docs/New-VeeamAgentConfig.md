@@ -16,33 +16,34 @@ Will configure generate a Veeam Agent for Windows configuration file.
 ```
 New-VeeamAgentConfig -NetworkPath <Uri> [-Credential <PSCredential>] [-ConfigPath <String>]
  [-EncryptionKey <String>] [-EncryptionHint <String>] [-RestorePoints <Int32>] [-Brand <String>]
- [-JobName <String>] [-JobDesc <String>] [-HealthChecks] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-JobName <String>] [-JobDesc <String>] [-HealthChecks] [-AppendToExisting <FileInfo>] [-WhatIf] [-Confirm]
+ [<CommonParameters>]
 ```
 
 ### Cloud
 ```
 New-VeeamAgentConfig -Credential <PSCredential> -ServerName <String> -RemoteRepositoryName <String>
  [-ServerPort <Int32>] [-ConfigPath <String>] [-EncryptionKey <String>] [-EncryptionHint <String>]
- [-RestorePoints <Int32>] [-Brand <String>] [-JobName <String>] [-JobDesc <String>] [-HealthChecks] [-WhatIf]
- [-Confirm] [<CommonParameters>]
+ [-RestorePoints <Int32>] [-Brand <String>] [-JobName <String>] [-JobDesc <String>] [-HealthChecks]
+ [-AppendToExisting <FileInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ### Local
 ```
 New-VeeamAgentConfig [-LocalBackupDestination <FileInfo>] [-ConfigPath <String>] [-EncryptionKey <String>]
  [-EncryptionHint <String>] [-RestorePoints <Int32>] [-Brand <String>] [-JobName <String>] [-JobDesc <String>]
- [-HealthChecks] [-WhatIf] [-Confirm] [<CommonParameters>]
+ [-HealthChecks] [-AppendToExisting <FileInfo>] [-WhatIf] [-Confirm] [<CommonParameters>]
 ```
 
 ## DESCRIPTION
 Allows the creation of a Veeam Agent for Windows configuration file with defined parameters.
-Local and Network options available.
+Local, Network and Cloud options available.
 
 ## EXAMPLES
 
 ### Example 1
 ```powershell
-PS C:\> New-VeeamAgentConfig -Type Local -EncryptionPassword SuperSecret! -Restorepoints 99
+PS C:\> New-VeeamAgentConfig -Type Local -EncryptionPassword 'SuperSecret!' -Restorepoints 99
 ```
 
 This will configure a machine to backup its C drive to the largest secondary drive the machine has. It will encrypt the backups with the supplied password and keep 99 restore points.
@@ -65,7 +66,12 @@ Accept wildcard characters: False
 ```
 
 ### -NetworkPath
-The UNC path for network backups. Example, \\Server\Share
+The UNC path for network backups.
+
+Example:  
+
+
+\\Server\Share
 
 ```yaml
 Type: Uri
@@ -95,7 +101,7 @@ Accept wildcard characters: False
 ```
 
 ### -Brand
-{{ Fill Brand Description }}
+Branding text.
 
 ```yaml
 Type: String
@@ -125,7 +131,11 @@ Accept wildcard characters: False
 ```
 
 ### -Credential
-{{ Fill Credential Description }}
+Credentials used to access the backup destination set in 
+
+
+
+ or 
 
 ```yaml
 Type: PSCredential
@@ -152,7 +162,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionHint
-{{ Fill EncryptionHint Description }}
+Hint provided for the encryption password.
 
 ```yaml
 Type: String
@@ -167,7 +177,7 @@ Accept wildcard characters: False
 ```
 
 ### -EncryptionKey
-{{ Fill EncryptionKey Description }}
+Password used to encrypt the backup files.
 
 ```yaml
 Type: String
@@ -182,7 +192,7 @@ Accept wildcard characters: False
 ```
 
 ### -HealthChecks
-{{ Fill HealthChecks Description }}
+Perform health checks as part of the backup job.
 
 ```yaml
 Type: SwitchParameter
@@ -197,7 +207,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobDesc
-{{ Fill JobDesc Description }}
+Description for the backup job.
 
 ```yaml
 Type: String
@@ -212,7 +222,7 @@ Accept wildcard characters: False
 ```
 
 ### -JobName
-{{ Fill JobName Description }}
+Name used for the backup job.
 
 ```yaml
 Type: String
@@ -227,7 +237,7 @@ Accept wildcard characters: False
 ```
 
 ### -LocalBackupDestination
-{{ Fill LocalBackupDestination Description }}
+Path used for local backups.
 
 ```yaml
 Type: FileInfo
@@ -242,7 +252,7 @@ Accept wildcard characters: False
 ```
 
 ### -RemoteRepositoryName
-{{ Fill RemoteRepositoryName Description }}
+Repository name used for Cloud Connect backups
 
 ```yaml
 Type: String
@@ -257,7 +267,7 @@ Accept wildcard characters: False
 ```
 
 ### -ServerName
-{{ Fill ServerName Description }}
+Server address for Cloud Connect.
 
 ```yaml
 Type: String
@@ -293,6 +303,21 @@ Shows what would happen if the cmdlet runs. The cmdlet is not run.
 Type: SwitchParameter
 Parameter Sets: (All)
 Aliases: wi
+
+Required: False
+Position: Named
+Default value: None
+Accept pipeline input: False
+Accept wildcard characters: False
+```
+
+### -AppendToExisting
+{{ Fill AppendToExisting Description }}
+
+```yaml
+Type: FileInfo
+Parameter Sets: (All)
+Aliases:
 
 Required: False
 Position: Named

@@ -17,9 +17,9 @@
         <maml:name>ConvertTo-VeeamEncodedString</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>String</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The string you want encoded.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -32,9 +32,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>String</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The string you want encoded.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -96,9 +96,9 @@
         <maml:name>Export-VeeamAgentConfig</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Path</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Path Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -108,9 +108,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>ID</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill ID Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -123,9 +123,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>ID</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill ID Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
         <dev:type>
           <maml:name>Guid</maml:name>
@@ -135,9 +135,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Path</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Path Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
           <maml:name>Object</maml:name>
@@ -258,9 +258,9 @@
         <maml:name>Get-VeeamAgentBackupInJob</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>JobId</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill JobId Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -273,9 +273,9 @@
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>JobId</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill JobId Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
         <dev:type>
           <maml:name>Guid</maml:name>
@@ -342,9 +342,9 @@
         <maml:name>Get-VeeamAgentBackupInRepository</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>RepositoryId</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill RepositoryId Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -357,9 +357,9 @@
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>RepositoryId</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill RepositoryId Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
         <dev:type>
           <maml:name>Guid</maml:name>
@@ -647,9 +647,9 @@
         <maml:name>Get-VeeamAgentJobHistory</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>JobID</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill JobID Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -662,9 +662,9 @@
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>JobID</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill JobID Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
         <dev:type>
           <maml:name>Guid</maml:name>
@@ -780,9 +780,9 @@
         <maml:name>Get-VeeamAgentRestorePoint</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>BackupId</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill BackupId Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -795,9 +795,9 @@
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>BackupId</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill BackupId Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
         <dev:type>
           <maml:name>Guid</maml:name>
@@ -913,9 +913,9 @@
         <maml:name>Import-VeeamAgentConfig</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>Path</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Path Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -925,9 +925,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>Credentials</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Credentials Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
           <dev:type>
             <maml:name>PSCredential</maml:name>
@@ -940,9 +940,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>Credentials</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Credentials Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
         <dev:type>
           <maml:name>PSCredential</maml:name>
@@ -952,9 +952,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>Path</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Path Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
           <maml:name>Object</maml:name>
@@ -1070,9 +1070,9 @@
         <maml:name>Install-VeeamAgent</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>DownloadPath</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill DownloadPath Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1082,9 +1082,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>DownloadURL</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>URL to the VeeamAgent installer zip you want to install.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1094,9 +1094,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
           <maml:name>MD5</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>MD5 of the zipped installer to verify against.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1106,9 +1106,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Force</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Used to force an install if another install is already found.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1117,9 +1117,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Upgrade</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Will update an existing install if the installer is newer.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1131,9 +1131,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>DownloadPath</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill DownloadPath Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -1143,9 +1143,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
         <maml:name>DownloadURL</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>URL to the VeeamAgent installer zip you want to install.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -1155,9 +1155,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="3" aliases="none">
         <maml:name>MD5</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>MD5 of the zipped installer to verify against.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -1167,9 +1167,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Force</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Used to force an install if another install is already found.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -1179,9 +1179,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Upgrade</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Will update an existing install if the installer is newer.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -1230,9 +1230,9 @@
         <maml:name>Install-VeeamAgentLicense</maml:name>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Path</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Path Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -1242,9 +1242,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Type</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Type Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1257,9 +1257,9 @@
     <command:parameters>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Path</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Path Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
           <maml:name>Object</maml:name>
@@ -1269,9 +1269,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Type</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Type Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -1333,9 +1333,9 @@
         <maml:name>Invoke-VeeamAgentBackup</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ActiveFull</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill ActiveFull Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1344,9 +1344,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ID</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill ID Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -1359,9 +1359,9 @@
         <maml:name>Invoke-VeeamAgentBackup</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Backup</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Backup Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1370,9 +1370,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ID</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill ID Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -1385,9 +1385,9 @@
         <maml:name>Invoke-VeeamAgentBackup</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ID</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill ID Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
           <dev:type>
             <maml:name>Guid</maml:name>
@@ -1397,9 +1397,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Path</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Path Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1409,9 +1409,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Standalone</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Standalone Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1423,9 +1423,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>ActiveFull</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill ActiveFull Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -1435,9 +1435,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Backup</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Backup Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -1447,9 +1447,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>ID</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill ID Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Guid</command:parameterValue>
         <dev:type>
           <maml:name>Guid</maml:name>
@@ -1459,9 +1459,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Path</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Path Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -1471,9 +1471,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Standalone</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Standalone Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -1528,16 +1528,16 @@
       </maml:description>
     </command:details>
     <maml:description>
-      <maml:para>Allows the creation of a Veeam Agent for Windows configuration file with defined parameters. Local and Network options available.</maml:para>
+      <maml:para>Allows the creation of a Veeam Agent for Windows configuration file with defined parameters. Local, Network and Cloud options available.</maml:para>
     </maml:description>
     <command:syntax>
       <command:syntaxItem>
         <maml:name>New-VeeamAgentConfig</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ConfigPath</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Path to save the xml config.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1547,9 +1547,11 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>NetworkPath</maml:name>
-          <maml:Description>
-            <maml:para>The UNC path for network backups. Example, \Server\Share</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>The UNC path for network backups.</maml:para>
+            <maml:para>Example:
+\Server\Share</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Uri</command:parameterValue>
           <dev:type>
             <maml:name>Uri</maml:name>
@@ -1559,9 +1561,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>RestorePoints</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The amount of restore points to configure the job with.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -1571,9 +1573,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Brand</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill Brand Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Branding text.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1583,9 +1585,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1594,9 +1596,12 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Credential</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill Credential Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Credentials used to access the backup destination set in </maml:para>
+            <maml:para></maml:para>
+            <maml:para></maml:para>
+            <maml:para> or</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
           <dev:type>
             <maml:name>PSCredential</maml:name>
@@ -1606,9 +1611,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>EncryptionHint</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill EncryptionHint Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Hint provided for the encryption password.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1618,9 +1623,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>EncryptionKey</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill EncryptionKey Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Password used to encrypt the backup files.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1630,9 +1635,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>HealthChecks</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill HealthChecks Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Perform health checks as part of the backup job.</maml:para>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1641,9 +1646,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>JobDesc</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill JobDesc Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Description for the backup job.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1653,9 +1658,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>JobName</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill JobName Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Name used for the backup job.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1665,23 +1670,35 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>False</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AppendToExisting</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill AppendToExisting Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>FileInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>New-VeeamAgentConfig</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ConfigPath</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Path to save the xml config.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1691,9 +1708,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>RestorePoints</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The amount of restore points to configure the job with.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -1703,9 +1720,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Brand</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill Brand Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Branding text.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1715,9 +1732,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1726,9 +1743,12 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Credential</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill Credential Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Credentials used to access the backup destination set in </maml:para>
+            <maml:para></maml:para>
+            <maml:para></maml:para>
+            <maml:para> or</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
           <dev:type>
             <maml:name>PSCredential</maml:name>
@@ -1738,9 +1758,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>EncryptionHint</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill EncryptionHint Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Hint provided for the encryption password.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1750,9 +1770,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>EncryptionKey</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill EncryptionKey Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Password used to encrypt the backup files.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1762,9 +1782,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>HealthChecks</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill HealthChecks Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Perform health checks as part of the backup job.</maml:para>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1773,9 +1793,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>JobDesc</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill JobDesc Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Description for the backup job.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1785,9 +1805,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>JobName</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill JobName Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Name used for the backup job.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1797,9 +1817,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>RemoteRepositoryName</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill RemoteRepositoryName Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Repository name used for Cloud Connect backups</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1809,9 +1829,9 @@
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ServerName</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill ServerName Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Server address for Cloud Connect.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1821,9 +1841,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ServerPort</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill ServerPort Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -1833,23 +1853,35 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>False</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AppendToExisting</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill AppendToExisting Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>FileInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
       <command:syntaxItem>
         <maml:name>New-VeeamAgentConfig</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>ConfigPath</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Path to save the xml config.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1859,9 +1891,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>RestorePoints</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>The amount of restore points to configure the job with.</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
           <dev:type>
             <maml:name>Int32</maml:name>
@@ -1871,9 +1903,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Brand</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill Brand Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Branding text.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1883,9 +1915,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1894,9 +1926,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>EncryptionHint</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill EncryptionHint Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Hint provided for the encryption password.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1906,9 +1938,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>EncryptionKey</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill EncryptionKey Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Password used to encrypt the backup files.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1918,9 +1950,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>HealthChecks</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill HealthChecks Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Perform health checks as part of the backup job.</maml:para>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -1929,9 +1961,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>JobDesc</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill JobDesc Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Description for the backup job.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1941,9 +1973,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>JobName</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill JobName Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Name used for the backup job.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -1953,9 +1985,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>LocalBackupDestination</maml:name>
-          <maml:Description>
-            <maml:para>{{ Fill LocalBackupDestination Description }}</maml:para>
-          </maml:Description>
+          <maml:description>
+            <maml:para>Path used for local backups.</maml:para>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
           <dev:type>
             <maml:name>FileInfo</maml:name>
@@ -1965,23 +1997,35 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
           </dev:type>
           <dev:defaultValue>False</dev:defaultValue>
         </command:parameter>
+        <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+          <maml:name>AppendToExisting</maml:name>
+          <maml:description>
+            <maml:para>{{ Fill AppendToExisting Description }}</maml:para>
+          </maml:description>
+          <command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
+          <dev:type>
+            <maml:name>FileInfo</maml:name>
+            <maml:uri />
+          </dev:type>
+          <dev:defaultValue>None</dev:defaultValue>
+        </command:parameter>
       </command:syntaxItem>
     </command:syntax>
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>ConfigPath</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Path to save the xml config.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -1991,9 +2035,11 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>NetworkPath</maml:name>
-        <maml:Description>
-          <maml:para>The UNC path for network backups. Example, \Server\Share</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>The UNC path for network backups.</maml:para>
+          <maml:para>Example:
+\Server\Share</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Uri</command:parameterValue>
         <dev:type>
           <maml:name>Uri</maml:name>
@@ -2003,9 +2049,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>RestorePoints</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>The amount of restore points to configure the job with.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -2015,9 +2061,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Brand</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill Brand Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Branding text.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2027,9 +2073,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
         <maml:name>Confirm</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2039,9 +2085,12 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Credential</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill Credential Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Credentials used to access the backup destination set in </maml:para>
+          <maml:para></maml:para>
+          <maml:para></maml:para>
+          <maml:para> or</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">PSCredential</command:parameterValue>
         <dev:type>
           <maml:name>PSCredential</maml:name>
@@ -2051,9 +2100,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>EncryptionHint</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill EncryptionHint Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Hint provided for the encryption password.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2063,9 +2112,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>EncryptionKey</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill EncryptionKey Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Password used to encrypt the backup files.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2075,9 +2124,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>HealthChecks</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill HealthChecks Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Perform health checks as part of the backup job.</maml:para>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2087,9 +2136,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>JobDesc</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill JobDesc Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Description for the backup job.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2099,9 +2148,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>JobName</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill JobName Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Name used for the backup job.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2111,9 +2160,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>LocalBackupDestination</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill LocalBackupDestination Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Path used for local backups.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
         <dev:type>
           <maml:name>FileInfo</maml:name>
@@ -2123,9 +2172,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>RemoteRepositoryName</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill RemoteRepositoryName Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Repository name used for Cloud Connect backups</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2135,9 +2184,9 @@
       </command:parameter>
       <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>ServerName</maml:name>
-        <maml:Description>
-          <maml:para>{{ Fill ServerName Description }}</maml:para>
-        </maml:Description>
+        <maml:description>
+          <maml:para>Server address for Cloud Connect.</maml:para>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2147,9 +2196,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>ServerPort</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill ServerPort Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Int32</command:parameterValue>
         <dev:type>
           <maml:name>Int32</maml:name>
@@ -2159,15 +2208,27 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
         <maml:name>WhatIf</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
           <maml:uri />
         </dev:type>
         <dev:defaultValue>False</dev:defaultValue>
+      </command:parameter>
+      <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
+        <maml:name>AppendToExisting</maml:name>
+        <maml:description>
+          <maml:para>{{ Fill AppendToExisting Description }}</maml:para>
+        </maml:description>
+        <command:parameterValue required="true" variableLength="false">FileInfo</command:parameterValue>
+        <dev:type>
+          <maml:name>FileInfo</maml:name>
+          <maml:uri />
+        </dev:type>
+        <dev:defaultValue>None</dev:defaultValue>
       </command:parameter>
     </command:parameters>
     <command:inputTypes>
@@ -2198,7 +2259,7 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; New-VeeamAgentConfig -Type Local -EncryptionPassword SuperSecret! -Restorepoints 99</dev:code>
+        <dev:code>PS C:\&gt; New-VeeamAgentConfig -Type Local -EncryptionPassword 'SuperSecret!' -Restorepoints 99</dev:code>
         <dev:remarks>
           <maml:para>This will configure a machine to backup its C drive to the largest secondary drive the machine has. It will encrypt the backups with the supplied password and keep 99 restore points.</maml:para>
         </dev:remarks>
@@ -2228,9 +2289,9 @@
         <maml:name>New-VeeamAgentRecoveryMedia</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>FileName</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill FileName Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -2240,9 +2301,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>Path</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill Path Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
           <dev:type>
             <maml:name>String</maml:name>
@@ -2252,9 +2313,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2263,9 +2324,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2277,9 +2338,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>FileName</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill FileName Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2289,9 +2350,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Path</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill Path Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">String</command:parameterValue>
         <dev:type>
           <maml:name>String</maml:name>
@@ -2301,9 +2362,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
         <maml:name>Confirm</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2313,9 +2374,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
         <maml:name>WhatIf</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2377,9 +2438,9 @@
         <maml:name>Remove-VeeamAgent</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2388,9 +2449,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
           <maml:name>DontRemoveLicense</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill DontRemoveLicense Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2399,9 +2460,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2413,9 +2474,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
         <maml:name>Confirm</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2425,9 +2486,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>DontRemoveLicense</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill DontRemoveLicense Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2437,9 +2498,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
         <maml:name>WhatIf</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2501,9 +2562,9 @@
         <maml:name>Remove-VeeamAgentLicense</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2512,9 +2573,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2526,9 +2587,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
         <maml:name>Confirm</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2538,9 +2599,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
         <maml:name>WhatIf</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2602,9 +2663,9 @@
         <maml:name>Set-VeeamAgentLowSpaceMonitor</maml:name>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
           <maml:name>GBLimit</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill GBLimit Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -2614,9 +2675,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
           <maml:name>PercentLimit</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>{{ Fill PercentLimit Description }}</maml:para>
-          </maml:Description>
+          </maml:description>
           <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
           <dev:type>
             <maml:name>Object</maml:name>
@@ -2626,9 +2687,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
           <maml:name>Confirm</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2637,9 +2698,9 @@
         </command:parameter>
         <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
           <maml:name>WhatIf</maml:name>
-          <maml:Description>
+          <maml:description>
             <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-          </maml:Description>
+          </maml:description>
           <dev:type>
             <maml:name>SwitchParameter</maml:name>
             <maml:uri />
@@ -2651,9 +2712,9 @@
     <command:parameters>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="0" aliases="none">
         <maml:name>GBLimit</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill GBLimit Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
           <maml:name>Object</maml:name>
@@ -2663,9 +2724,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="1" aliases="none">
         <maml:name>PercentLimit</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>{{ Fill PercentLimit Description }}</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="true" variableLength="false">Object</command:parameterValue>
         <dev:type>
           <maml:name>Object</maml:name>
@@ -2675,9 +2736,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="cf">
         <maml:name>Confirm</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Prompts you for confirmation before running the cmdlet.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>
@@ -2687,9 +2748,9 @@
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="wi">
         <maml:name>WhatIf</maml:name>
-        <maml:Description>
+        <maml:description>
           <maml:para>Shows what would happen if the cmdlet runs. The cmdlet is not run.</maml:para>
-        </maml:Description>
+        </maml:description>
         <command:parameterValue required="false" variableLength="false">SwitchParameter</command:parameterValue>
         <dev:type>
           <maml:name>SwitchParameter</maml:name>

@@ -20,9 +20,16 @@
         [string]$EncryptionHint,
         [int]$RestorePoints = 14,
         [string]$Brand = 'Veeam Agent',
-        [string]$JobName = "Backup Job $env:COMPUTERNAME",
+        [string]$JobName,
         [string]$JobDesc = "Created by $env:USERNAME at $(Get-Date), using the VeeamAgent PowerShell module.",
-        [switch]$HealthChecks
+        [switch]$HealthChecks,
+        [ValidateScript({
+            if( -Not ($_ | Test-Path) ){
+                throw "Existing config does not exist"
+            }
+            return $true
+        })]
+        [System.IO.FileInfo]$AppendToExisting
     )
     Begin{
         $Invocation = (Get-Variable MyInvocation -Scope 1).Value
@@ -32,6 +39,7 @@
     Process{
         Try{
             if ($PSCmdlet.ParameterSetName -eq 'Network') {
+                $Type = 'Network'
                 # TODO
                 if (![bool]$NetworkPath.IsUnc) {
                     return Write-Output "ERROR: Network Path given is not a UNC path. '\\Server\Share'"
@@ -39,13 +47,14 @@
                 [xml]$xml = Get-Content "$($ConfigRoot)\Network.xml"
                 $xml.ExecutionResult.data.JobInfo.TargetInfo.Path = $NetworkPath.LocalPath
                 if (!$Credential) {
-                    $xml.ExecutionResult.data.JobInfo.TargetInfo.CredentialsInfo.RemoveAll()
+                    $null = $xml.ExecutionResult.data.JobInfo.TargetInfo.CredentialsInfo.RemoveAll()
                 } else {
                     $xml.ExecutionResult.data.JobInfo.TargetInfo.CredentialsInfo.UserName = ConvertTo-VeeamEncodedString $Credential.UserName
                     $xml.ExecutionResult.data.JobInfo.TargetInfo.CredentialsInfo.Password = ConvertTo-VeeamEncodedString $Credential.GetNetworkCredential().Password
                 }
             }
             if($PSCmdlet.ParameterSetName -eq 'Local') {
+                $Type = 'Local'
                 $DriveName = $LocalBackupDestination.FullName[0..2] -join ''
                 $RelativePath = "$($LocalBackupDestination.FullName.replace($DriveName, ''))\"
                 [xml]$xml = Get-Content "$($ConfigRoot)\Local.xml"
@@ -53,6 +62,7 @@
                 $xml.ExecutionResult.data.JobInfo.TargetInfo.RelativePath = $RelativePath
             }
             if($PSCmdlet.ParameterSetName -eq 'Cloud') {
+                $Type = 'Cloud'
                 [xml]$xml = Get-Content "$($ConfigRoot)\CloudConnect.xml"
 
                 # Cloud config
@@ -66,6 +76,7 @@
 
             $xml.ExecutionResult.Version = "$(Get-VeeamAgentVersion)"
             $xml.ExecutionResult.Data.JobInfo.ObjectName = $env:COMPUTERNAME
+            if (-not $JobName) { $JobName = "$Type Backup Job $env:COMPUTERNAME"}
             $xml.ExecutionResult.Data.JobInfo.JobName = $JobName
             $xml.ExecutionResult.Data.JobInfo.JobDesc = $JobDesc
             if ($EncryptionKey) {
@@ -73,19 +84,29 @@
                 $xml.ExecutionResult.Data.JobInfo.StorageInfo.Encryption.Key.Password = ConvertTo-VeeamEncodedString $EncryptionKey
             } else {
                 $xml.ExecutionResult.Data.JobInfo.StorageInfo.Encryption.Enabled = 'False'
-                $xml.ExecutionResult.Data.JobInfo.StorageInfo.Encryption.Key.RemoveAll()
+                $null = $xml.ExecutionResult.Data.JobInfo.StorageInfo.Encryption.Key.RemoveAll()
             }
             if ($HealthChecks) {
                 $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.HealthCheck.MonthlyInfo.Week = $(Get-Random -Minimum 1 -Maximum 4).ToString()
                 $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.HealthCheck.MonthlyInfo.DayOfWeek = $(Get-Random -Minimum 1 -Maximum 7).ToString()
             } else {
-                $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.HealthCheck.Enabled = 'False'
-                $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.HealthCheck.Kind = ''
-                $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.HealthCheck.MonthlyInfo.RemoveAll()
+                $ChildNode = $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.SelectSingleNode('HealthCheck')
+                $null = $xml.ExecutionResult.Data.JobInfo.ScheduleInfo.RemoveChild($ChildNode)
             }
             $xml.ExecutionResult.Data.JobInfo.RetentionInfo.RestorePointsCount = $RestorePoints.ToString()
-            # Brand
             $xml.ExecutionResult.Data.ApplicationSettings.LogoText = $Brand
+
+            if ($AppendToExisting -and (Test-Path $AppendToExisting)) {
+                $xml2 = $xml
+                [xml]$xml = Get-Content $AppendToExisting
+                $ImportTo = $Xml.SelectSingleNode("/ExecutionResult/Data")
+                $ImportFrom = $Xml2.SelectSingleNode("/ExecutionResult/Data/JobInfo")
+                if($xml.ExecutionResult.Data.JobInfo.JobName -contains $xml2.ExecutionResult.Data.JobInfo.JobName) {
+                    return Write-Error 'JobName already exists'
+                }
+                $null = $ImportTo.AppendChild($XML.ImportNode($ImportFrom, $true))
+            }
+
             if ($PSCmdlet.ShouldProcess($ConfigPath, "New-VeeamAgentConfig")) {
                 $xml.Save($ConfigPath)
             }

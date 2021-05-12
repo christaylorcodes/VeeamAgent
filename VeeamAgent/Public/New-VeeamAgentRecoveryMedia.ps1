@@ -12,6 +12,6 @@
     $Command = "`"$env:ProgramFiles\Veeam\Endpoint Backup\Veeam.EndPoint.Manager.exe`" /createrecoverymediaiso$CustomPath"
     Write-Verbose $Command
     if ($PSCmdlet.ShouldProcess("$Path\$FileName.iso", "New-VeeamAgentRecoveryMedia")) {
-        cmd /c $Command
+        cmd /c $Command 2>&1
     }
 }

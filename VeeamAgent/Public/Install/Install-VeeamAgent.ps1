@@ -2,14 +2,15 @@
     [CmdletBinding()]
     Param(
         [string]$DownloadPath = $env:TEMP,
-        [string]$DownloadURL = $DefaultDownloadURL,
-        [string]$MD5 = $DefaultMD5,
+        [string]$DownloadURL = $script:DefaultDownloadURL,
+        [string]$MD5 = $script:DefaultMD5,
         [switch]$Force,
         [switch]$Upgrade
     )
     $DownloadFileName = 'VeeamAgent.zip'
     $Installer = (Split-Path $DownloadURL -Leaf).Replace('.zip','.exe')
     $InstallerPath = (Join-Path $DownloadPath $Installer).Replace('.exe','.exe')
+    $DownloadFullPath = Join-Path $DownloadPath $DownloadFileName
     [version]$InstallerVersion = ($Installer -split '_')[1] -replace '.exe', ''
 
     # Test to see if Veeam Agent is already installed
@@ -28,29 +29,39 @@
     }
 
     # Test to see if there is already an installer present and a force has not been issued.
-    if((Test-Path $InstallerPath) -eq $False -or (Get-FileHash $InstallerPath -Algorithm MD5).Hash -ne $MD5 -or $Force){
+    if((Test-Path $InstallerPath) -eq $False -or $Force){
 
-        Write-Verbose "Downloading installer."
-        try{
-            if(!(Test-Path $DownloadPath)){
-                New-Item -ItemType Directory $DownloadPath
+        if((Test-Path $DownloadFullPath) -eq $False -or (Get-FileHash $DownloadFullPath -Algorithm MD5).Hash -ne $MD5 -or $Force){
+
+            Write-Verbose "Downloading installer."
+            try{
+                if(!(Test-Path $DownloadPath)){
+                    New-Item -ItemType Directory $DownloadPath
+                }
+                $null = Remove-Item $DownloadFullPath -Force -ErrorAction SilentlyContinue
+                Invoke-WebRequest -Uri $DownloadURL -OutFile $DownloadFullPath
             }
-            Remove-Item "$DownloadPath\$DownloadFileName" -Force -ErrorAction SilentlyContinue | Out-Null
-            Invoke-WebRequest -Uri $DownloadURL -OutFile "$DownloadPath\$DownloadFileName"
-        }
-        catch{
-            Write-Error "There was an error downloading the agent." -ErrorAction Continue
-            Write-Error $_ -ErrorAction Stop
+            catch{
+                $Message = "There was an error downloading the agent. "
+                $Message += $_
+                return Write-Error  $Message
+            }
+
+            if ((Get-FileHash $DownloadFullPath -Algorithm MD5).Hash -ne $MD5) {
+                $null = Remove-Item $DownloadFullPath -Force
+                $Message = "There was an error downloading the agent. The installer doesn't match check sum."
+                return Write-Error  $Message
+            }
         }
 
         Write-Verbose "Extracting installer"
         try{
-            Remove-Item $InstallerPath -Force -ErrorAction SilentlyContinue | Out-Null
+            $null = Remove-Item $InstallerPath -Force -ErrorAction SilentlyContinue
             Add-Type -AssemblyName System.IO.Compression.FileSystem
-            [System.IO.Compression.ZipFile]::ExtractToDirectory("$DownloadPath\$DownloadFileName", $DownloadPath)
+            [System.IO.Compression.ZipFile]::ExtractToDirectory($DownloadFullPath, $DownloadPath)
         }
         catch{
-            $Message = "There was an error extracting the agent."
+            $Message = "There was an error extracting the agent. "
             $Message += $_
             return Write-Error  $Message
         }
@@ -81,6 +92,6 @@
         return Write-Error $_
     }
     Write-Verbose "Cleaning up"
-    $null = Remove-Item "$DownloadPath\$DownloadFileName" -Force
+    $null = Remove-Item $DownloadFullPath -Force
     $null = Remove-Item $InstallerPath -Force
 }

@@ -11,72 +11,72 @@ Locale: en-US
 This module give you commands to un/install, configure, report and monitor on Veeam Agent.
 
 ## VeeamAgent Cmdlets
-### [ConvertTo-VeeamEncodedString](ConvertTo-VeeamEncodedString.md)
+### [ConvertTo-VeeamEncodedString](Docs/ConvertTo-VeeamEncodedString.md)
 Encodes strings for use in configurations.
 
-### [Export-VeeamAgentConfig](Export-VeeamAgentConfig.md)
+### [Export-VeeamAgentConfig](Docs/Export-VeeamAgentConfig.md)
 Used to export jobs to a backup config.
 
-### [Get-VeeamAgentBackup](Get-VeeamAgentBackup.md)
+### [Get-VeeamAgentBackup](Docs/Get-VeeamAgentBackup.md)
 Lists all the backups configured on the agent.
 
-### [Get-VeeamAgentBackupInJob](Get-VeeamAgentBackupInJob.md)
+### [Get-VeeamAgentBackupInJob](Docs/Get-VeeamAgentBackupInJob.md)
 Gets the backups associated with a job ID.
 
-### [Get-VeeamAgentBackupInRepository](Get-VeeamAgentBackupInRepository.md)
+### [Get-VeeamAgentBackupInRepository](Docs/Get-VeeamAgentBackupInRepository.md)
 Gets the backups associated with a repository ID.
 
-### [Get-VeeamAgentBackupRepository](Get-VeeamAgentBackupRepository.md)
+### [Get-VeeamAgentBackupRepository](Docs/Get-VeeamAgentBackupRepository.md)
 Gets all the backup repositories that have been configured.
 
-### [Get-VeeamAgentCloudRepository](Get-VeeamAgentCloudRepository.md)
+### [Get-VeeamAgentCloudRepository](Docs/Get-VeeamAgentCloudRepository.md)
 Gets all the cloud repositories that have been configured.
 
-### [Get-VeeamAgentForeignRepositoryProvider](Get-VeeamAgentForeignRepositoryProvider.md)
+### [Get-VeeamAgentForeignRepositoryProvider](Docs/Get-VeeamAgentForeignRepositoryProvider.md)
 {{ Fill in the Synopsis }}
 
-### [Get-VeeamAgentJob](Get-VeeamAgentJob.md)
+### [Get-VeeamAgentJob](Docs/Get-VeeamAgentJob.md)
 Lists all the agent jobs that have been configured.
 
-### [Get-VeeamAgentJobHistory](Get-VeeamAgentJobHistory.md)
+### [Get-VeeamAgentJobHistory](Docs/Get-VeeamAgentJobHistory.md)
 Gets the history for a job.
 
-### [Get-VeeamAgentOneDriveRepository](Get-VeeamAgentOneDriveRepository.md)
+### [Get-VeeamAgentOneDriveRepository](Docs/Get-VeeamAgentOneDriveRepository.md)
 Gets all the OneDrive repositories that have been configured.
 
-### [Get-VeeamAgentRestorePoint](Get-VeeamAgentRestorePoint.md)
+### [Get-VeeamAgentRestorePoint](Docs/Get-VeeamAgentRestorePoint.md)
 Lists agent restore points for a backup.
 
-### [Get-VeeamAgentVersion](Get-VeeamAgentVersion.md)
+### [Get-VeeamAgentVersion](Docs/Get-VeeamAgentVersion.md)
 Returns the currently installed Veeam Agent version. Returns $false if not found.
 
-### [Import-VeeamAgentConfig](Import-VeeamAgentConfig.md)
+### [Import-VeeamAgentConfig](Docs/Import-VeeamAgentConfig.md)
 Imports settings from an export.
 
-### [Initialize-VeeamLocalBackupDestination](Initialize-VeeamLocalBackupDestination.md)
+### [Initialize-VeeamLocalBackupDestination](Docs/Initialize-VeeamLocalBackupDestination.md)
 Will look for a local USB drive to use as a backup destination.
 
-### [Install-VeeamAgent](Install-VeeamAgent.md)
+### [Install-VeeamAgent](Docs/Install-VeeamAgent.md)
 This function will install Veeam Agent For Windows.
 
-### [Install-VeeamAgentLicense](Install-VeeamAgentLicense.md)
+### [Install-VeeamAgentLicense](Docs/Install-VeeamAgentLicense.md)
 Will install a given license file.
 
-### [Invoke-VeeamAgentBackup](Invoke-VeeamAgentBackup.md)
+### [Invoke-VeeamAgentBackup](Docs/Invoke-VeeamAgentBackup.md)
 Initiate a backup.
 
-### [New-VeeamAgentConfig](New-VeeamAgentConfig.md)
+### [New-VeeamAgentConfig](Docs/New-VeeamAgentConfig.md)
 Will configure generate a Veeam Agent for Windows configuration file.
 
-### [New-VeeamAgentRecoveryMedia](New-VeeamAgentRecoveryMedia.md)
+### [New-VeeamAgentRecoveryMedia](Docs/New-VeeamAgentRecoveryMedia.md)
 Used to the create recovery media ISO.
 
-### [Remove-VeeamAgent](Remove-VeeamAgent.md)
+### [Remove-VeeamAgent](Docs/Remove-VeeamAgent.md)
 Uninstalls Veeam Agent
 
-### [Remove-VeeamAgentLicense](Remove-VeeamAgentLicense.md)
+### [Remove-VeeamAgentLicense](Docs/Remove-VeeamAgentLicense.md)
 Removes any and all licensing.
 
-### [Set-VeeamAgentLowSpaceMonitor](Set-VeeamAgentLowSpaceMonitor.md)
+### [Set-VeeamAgentLowSpaceMonitor](Docs/Set-VeeamAgentLowSpaceMonitor.md)
 Used to adjust low space alerts based on disk size.
 

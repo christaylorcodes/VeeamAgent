@@ -8,12 +8,11 @@
         [string]$Type
     )
     switch ($Type) {
-        'Workstation'   { $Option = ' /w' }
-        'Server'        { $Option = ' /s' }
-        default         { Throw 'Invalid type received.'}
+        'Workstation'   { $Option = '/w' }
+        'Server'        { $Option = '/s' }
      }
-    $Command = "`"$env:ProgramFiles\Veeam\Endpoint Backup\Veeam.Agent.Configurator.exe`" -license /f:`"$Path`"$Option"
+    $Command = "`"$env:ProgramFiles\Veeam\Endpoint Backup\Veeam.Agent.Configurator.exe`" -license /f:`"$Path`" $Option"
     Write-Verbose $Command
-    $Result = cmd /c $Command
+    $Result = cmd /c $Command 2>&1
     if ($Result -ne 'ExitCode: 0') { Write-Error $Result }
 }

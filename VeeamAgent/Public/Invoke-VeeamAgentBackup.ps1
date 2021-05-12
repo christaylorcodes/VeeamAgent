@@ -20,5 +20,5 @@
     if ($ID) { $Arguments += "`"$ID`"" }
     $Command = "`"$env:ProgramFiles\Veeam\Endpoint Backup\Veeam.EndPoint.Manager.exe`" $($Arguments -join ' ')"
     Write-Verbose $Command
-    cmd /c $Command
+    cmd /c $Command 2>&1
 }
