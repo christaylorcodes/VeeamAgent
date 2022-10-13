@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ExecutionResult Version="5.0.3.4708" ExitCode="0">
 <Data>
-    <JobInfo CryptType="10" CryptId="00000000-0000-0000-0000-000000000000" ObjectName="COMPUTERNAME" ConfigId="00000000-0000-0000-0000-000000000000" JobName="Backup Job COMPUTERNAME" JobDesc="Created by USERNAME at DATE, using the VeeamAgent PowerShell module." PolicyJobName="" JobMode="1" IsDisabledByPolicy="False">
+    <JobInfo CryptType="10" CryptId="00000000-0000-0000-0000-000000000000" ObjectName="COMPUTERNAME" ConfigId="00000000-0000-0000-0000-000000000000" JobName="Network Backup Job COMPUTERNAME" JobDesc="Created by USERNAME at DATE, using the VeeamAgent PowerShell module." PolicyJobName="" JobMode="1" IsDisabledByPolicy="False">
         <SourceInfo>
             <EpDiskFilter BackupMode="0" BackupSystemState="False" BackupUserFolders="False" PartialConfig="False" BackupAllUsbDrives="False" ExcludeSystemState="False" ExcludeOneDriveFolders="False">
                 <IncludeMasks />

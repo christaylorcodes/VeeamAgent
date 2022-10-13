@@ -75,6 +75,7 @@
                 $xml.ExecutionResult.Data.JobInfo.TargetInfo.ServerCredentials.Password = ConvertTo-VeeamEncodedString $Credential.GetNetworkCredential().Password
             }
 
+            $xml.ExecutionResult.Data.JobInfo.ConfigId = (New-Guid).guid.ToString()
             $xml.ExecutionResult.Version = "$(Get-VeeamAgentVersion)"
             $xml.ExecutionResult.Data.JobInfo.ObjectName = $env:COMPUTERNAME
             if (-not $JobName) { $JobName = "$Type Backup Job $env:COMPUTERNAME" }
