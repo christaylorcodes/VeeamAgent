@@ -1,5 +1,5 @@
 ﻿[![Build status](https://ci.appveyor.com/api/projects/status/5ebhwddd5n5iqw1a?svg=true)](https://ci.appveyor.com/project/christaylorcodes/veeamagent)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37cbca9802d740aa91bcac68d4846400)](https://www.codacy.com/manual/christaylorcodes/VeeamAgent?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/VeeamAgent&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/37cbca9802d740aa91bcac68d4846400)](https://www.codacy.com/gh/christaylorcodes/VeeamAgent/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=christaylorcodes/VeeamAgent&amp;utm_campaign=Badge_Grade)
 [![Gallery](https://img.shields.io/powershellgallery/v/VeeamAgent?label=PS%20Gallery&logo=powershell&logoColor=white)](https://www.powershellgallery.com/packages/VeeamAgent)
 
 ![VeeamAgentLogo](vaw_01.png)

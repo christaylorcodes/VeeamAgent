@@ -1,67 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ExecutionResult Version="4.0.1.2169" ExitCode="0">
-  <Data>
-    <JobInfo CryptType="10" CryptId="00000000-0000-0000-0000-000000000000" ObjectName="COMPUTERNAME" ConfigId="00000000-0000-0000-0000-000000000000" JobName="Backup Job COMPUTERNAME" JobDesc="Created by USERNAME at DATE, using the VeeamAgent PowerShell module." PolicyJobName="" JobMode="1">
-      <SourceInfo>
-        <EpDiskFilter BackupMode="0" BackupSystemState="False" BackupUserFolders="False" PartialConfig="False" BackupAllUsbDrives="False">
-          <IncludeMasks />
-          <ExcludeMasks />
-        </EpDiskFilter>
-      </SourceInfo>
-      <TargetInfo Type="2" Path="NETWORKPATH">
-        <CredentialsInfo UserName="USERNAME" Password="PASSWORD" />
-      </TargetInfo>
-      <StorageInfo CompressionLevel="5" BlockSize="1">
-        <Encryption Enabled="True">
-          <Key Hint="ENCRYPTIONHINT" Password="ENCRYPTIONPASSWORD" />
-        </Encryption>
-      </StorageInfo>
-      <RetentionInfo RestorePointsCount="14" />
-      <CacheInfo Enabled="False" />
-      <GuestInfo>
+<ExecutionResult Version="5.0.3.4708" ExitCode="0">
+<Data>
+    <JobInfo CryptType="10" CryptId="00000000-0000-0000-0000-000000000000" ObjectName="COMPUTERNAME" ConfigId="00000000-0000-0000-0000-000000000000" JobName="Backup Job COMPUTERNAME" JobDesc="Created by USERNAME at DATE, using the VeeamAgent PowerShell module." PolicyJobName="" JobMode="1" IsDisabledByPolicy="False">
+        <SourceInfo>
+            <EpDiskFilter BackupMode="0" BackupSystemState="False" BackupUserFolders="False" PartialConfig="False" BackupAllUsbDrives="False" ExcludeSystemState="False" ExcludeOneDriveFolders="False">
+                <IncludeMasks />
+                <ExcludeMasks />
+                <UserProfilesBackupOptions SelectedFolderTypes="127" SelectedSpecialFolders="1" ExcludeRoamingProfiles="True" ExcludeTemporaryProfiles="False" ExcludeCorruptedProfiles="False" />
+            </EpDiskFilter>
+        </SourceInfo>
+        <TargetInfo Type="2" Path="NETWORKPATH">
+            <CredentialsInfo UserName="USERNAME" Password="PASSWORD" />
+        </TargetInfo>
+        <StorageInfo CompressionLevel="5" BlockSize="1">
+            <Encryption Enabled="True">
+                <Key Hint="ENCRYPTIONHINT" Password="ENCRYPTIONPASSWORD" />
+            </Encryption>
+        </StorageInfo>
+        <RetentionInfo RetentionType="1" RestorePointsCount="14" />
+        <CacheInfo Enabled="False" />
+        <GuestInfo>
         <Applications Enabled="False" ProcessTransactionLogs="True">
-          <Credentials UserName="" Password="" />
-          <Sql Mode="1">
             <Credentials UserName="" Password="" />
-            <Backup Enabled="False" Expirable="True" BackupMinutes="15" ExpireDays="15" />
-          </Sql>
-          <Oracle Mode="0" LifetimeHours="24" SizeGB="10" AccountType="0">
-            <Credentials UserName="" Password="" />
-            <Backup Enabled="False" Expirable="True" BackupMinutes="15" ExpireDays="15" />
-          </Oracle>
-          <SharePoint>
-            <Credentials UserName="" Password="" />
-          </SharePoint>
-          <Script Mode="0" PreFreezePath="" PostThawPath="">
-            <Credentials UserName="" Password="" />
-          </Script>
+            <Sql Mode="1">
+                <Credentials UserName="" Password="" />
+                <Backup Enabled="False" Expirable="True" BackupMinutes="15" ExpireDays="15" />
+            </Sql>
+            <Oracle Mode="0" LifetimeHours="24" SizeGB="10" AccountType="0">
+                <Credentials UserName="" Password="" />
+                <Backup Enabled="False" Expirable="True" BackupMinutes="15" ExpireDays="15" />
+            </Oracle>
+            <SharePoint>
+                <Credentials UserName="" Password="" />
+            </SharePoint>
+            <Script Mode="0" PreFreezePath="" PostThawPath="">
+                <Credentials UserName="" Password="" />
+            </Script>
         </Applications>
         <Indexing Enabled="False" Type="3">
-          <IncludedFolders />
-          <ExcludedFolders>
+        <IncludedFolders />
+        <ExcludedFolders>
             <String value="%windir%" />
             <String value="%ProgramFiles%" />
             <String value="%ProgramFiles(x86)%" />
             <String value="%ProgramW6432%" />
             <String value="%TEMP%" />
-          </ExcludedFolders>
+        </ExcludedFolders>
         </Indexing>
-      </GuestInfo>
-      <ScheduleInfo RunManually="False" ResumeMissedBackup="True" EjectRemovableStorageOnceBackupIsCompleted="False" AtLogOff="False" AtLock="False" AtStorageAttach="False" UseBackupWindow="False" Version="1" LimitBackupsFrequency="False" CompletionMode="0" Type="1">
-        <DailyInfo Time="08/13/2020 00:30:00" Kind="0" Days="Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday" />
-        <SyntheticFull Enabled="False" />
-        <ActiveFull Enabled="False" />
-        <HealthCheck Enabled="True" Kind="1">
-          <MonthlyInfo Week="1" DayOfWeek="1" Months="January, February, March, April, May, June, July, August, September, October, November, December" />
-        </HealthCheck>
-        <Compact Enabled="False" />
-        <RetryInfo Enabled="True" Times="3" TimeoutMinutes="10" />
-      </ScheduleInfo>
+        </GuestInfo>
+        <ScheduleInfo RunManually="False" ResumeMissedBackup="True" EjectRemovableStorageOnceBackupIsCompleted="False" AtLogOff="False" AtLock="False" AtStorageAttach="False" UseBackupWindow="False" Version="1" LimitBackupsFrequency="False" CompletionMode="0" Type="1">
+            <DailyInfo Time="10/13/2022 00:30:00" Kind="0" Days="Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday" />
+            <SyntheticFull Enabled="False" />
+            <ActiveFull Enabled="False" />
+            <HealthCheck Enabled="True" Kind="1"><MonthlyInfo Week="5" DayOfWeek="5" Months="January, February, March, April, May, June, July, August, September, October, November, December" /></HealthCheck>
+            <Compact Enabled="False" />
+            <RetryInfo Enabled="True" Times="3" TimeoutMinutes="10" />
+        </ScheduleInfo>
+        <GfsPolicyInfo>
+            <GfsPolicy IsEnabled="False">
+                <GfsWeeklyPolicy IsEnabled="False" NumberOfWeeks="1" BeginTimeUtc="01/01/0001 00:00:00" DesiredTime="0" />
+                <GfsMonthlyPolicy IsEnabled="False" NumberOfMonths="1" BeginTimeUtc="01/01/0001 00:00:00" DesiredTime="1" />
+                <GfsYearlyPolicy IsEnabled="False" NumberOfYears="1" BeginTimeUtc="01/01/0001 00:00:00" DesiredTime="1" />
+            </GfsPolicy>
+        </GfsPolicyInfo>
+        <StatisticsInfo AverageDuration="00:00:00" TotalSize="0" LastPointSize="0" />
     </JobInfo>
-    <ApplicationSettings CryptType="10" CryptId="00000000-0000-0000-0000-000000000000" CheckUpdates="False" DisableScheduledBackups="False" DisableControlPanelNotification="False" ThrottleBackupActivity="True" ShowBackupDuration="False" DisableWakeupTimers="False" LockDownMode="False" ServiceProviderMode="False" LogoText="BRAND" EnableUserFlr="False">
-    <Throttling LimitBandwith="False" SpeedLimit="1" SpeedUnit="2" DisableBackupOverMeteredConnection="True" RestrictVPNConnections="False" RestrictWiFiNetworks="False" />
+    <ApplicationSettings CryptType="10" CryptId="00000000-0000-0000-0000-000000000000" CheckUpdates="False" DisableScheduledBackups="False" DisableControlPanelNotification="False" ThrottleBackupActivity="True" ShowBackupDuration="False" DisableWakeupTimers="False" LockDownMode="False" ServiceProviderMode="False" LastCheckForUpdates="04/05/2021 17:25:41" LogoText="BRAND" EnableUserFlr="False">
+        <Throttling LimitBandwith="False" SpeedLimit="1" SpeedUnit="2" DisableBackupOverMeteredConnection="True" RestrictVPNConnections="False" RestrictWiFiNetworks="False" />
     </ApplicationSettings>
-  </Data>
-  <Notifications />
-  <AmMessages />
+</Data>
+<AmMessages />
 </ExecutionResult>
